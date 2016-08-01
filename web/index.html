@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getman</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
+
+</head>
+<div id="iheader">
+    <p id="ip">Getman</p>
+</div>
+<div id="h1_mainquery">
+    <div id="h1_mainquery_1">
+        <div id="dsel_method">
+            <select id="isel_method" name="nsel_method" size="1" required="required">
+                <option>OPTIONS</option>
+                <option>GET</option>
+                <option>HEAD</option>
+                <option>POST</option>
+                <option>PUT</option>
+                <option>PATCH</option>
+                <option>DELETE</option>
+                <option>TRACE</option>
+                <option>CONNECT</option>
+            </select>
+        </div>
+        <div id="durls">
+            <input id="iurls" name="nurls" type="text" value="http://localhost:8080/Getman/" disabled="disabled">
+        </div>
+        <div id="durld">
+            <input id="iurld" name="nurld" type="text" value="">
+        </div>
+        <div id="dbparam">
+            <input id="ibparam" name="nbparam" type="button" value="Params" onclick="AddParamN()">
+        </div>
+        <div id="dbsend">
+            <input id="ibsend" name="nbsend" type="button" value="Send">
+        </div>
+    </div>
+</div>
+<div id="h2_param_path">
+    <!--div id="h2_param_path_1" class="ch2_param_path_1">
+        <div class="cdpath_param_key">
+            <input id="ipath_param_key_1" type="text" placeholder="key" class="cipath_param_key">
+        </div>
+        <div class="cdpath_param_value">
+            <input id="ipath_param_value_1" type="text" placeholder="value" class="cipath_param_value">
+        </div>
+        <div class="cdpath_param_del">
+            <input id="ipath_param_del_1" type="button" value="x" class="cipath_param_del">
+        </div>
+    </div-->
+    <!--Repeat block-->
+</div>
+<div id="h3_zagolovki">
+    <div id="dh3_zagolovki_1">
+        <input id="ih3_zagolovki_1" type="button" value="Input" class="cbh3_zagolovki" onclick="CheckZagolovok(1)">
+    </div>
+    <div id="dh3_zagolovki_2">
+        <input id="ih3_zagolovki_2" type="button" value="Headers" class="cbh3_zagolovki" onclick="CheckZagolovok(2)">
+    </div>
+    <div id="dh3_zagolovki_3">
+        <input id="ih3_zagolovki_3" type="button" value="Body" class="cbh3_zagolovki" onclick="CheckZagolovok(3)">
+    </div>
+</div>
+<div id="h4_zag_input">
+ddddddddd
+</div>
+<div id="h4_zag_headers">
+    <p>Раздел в разработке (Headers)</p>
+</div>
+<div id="h4_zag_body">
+    <p>Раздел в разработке (Body)</p>
+</div>
+
+<p>----------------------------------------------------------------------------------------------------</p>
+<body ng-controller="mainCtrl">
+
+<form id="myform" name="myformname"></form>
+<div id="div_head">
+    <div class="div_head_block">
+        <h1>URL</h1>
+    </div>
+    <div class="div_head_block">
+        <p>Host</p>
+        <input type="text" id="url_host" value="http://localhost" disabled="disabled" ng-model="url_host"/>
+    </div>
+    <div class="div_head_block">
+        <p>Port</p>
+        <input type="text" id="url_port" value=":8080" disabled="disabled" ng-model="url_port"/>
+    </div>
+    <div class="div_head_block">
+        <p>Project</p>
+        <input type="text" id="url_project" value="/Getman/" disabled="disabled" ng-model="url_project"/>
+    </div>
+    <div class="div_head_block">
+        <p>Path</p>
+        <input type="text" id="uri_path" value="zad" form="myform" ng-model="url_path"/>
+    </div>
+</div>
+
+<div id="div_middle">
+    <div class="div_middle_block">
+        <div class="div_middle_block_in radio_cl">
+            <div class="in_method">
+                <p>OPTIONS</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="OPTIONS" checked="checked">
+            </div>
+            <div class="in_method">
+                <p>GET</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="GET">
+            </div>
+            <div class="in_method">
+                <p>HEAD</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="HEAD">
+            </div>
+            <div class="in_method">
+                <p>POST</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="POST">
+            </div>
+            <div class="in_method">
+                <p>PUT</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="PUT">
+            </div>
+            <div class="in_method">
+                <p>PATCH</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="PATCH">
+            </div>
+            <div class="in_method">
+                <p>DELETE</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="DELETE">
+            </div>
+            <div class="in_method">
+                <p>TRACE</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="TRACE" disabled="disabled">
+            </div>
+            <div class="in_method">
+                <p>CONNECT</p>
+                <input ng-model="method" type="radio" name="type_zapros" value="CONNECT" disabled="disabled">
+            </div>
+        </div>
+    </div>
+    <div id="control">
+        <div id="control_pane">
+            <input id="control_pane_inp" type="button" value="+" onclick="AddInput()"/>
+        </div>
+        <div id="input_block">
+
+        </div>
+    </div>
+</div>
+
+<div id="div_foot">
+    <div id="div_foot_but">
+        <input type="submit" value="Отправить запрос" id="but_submit" form="myform"/><!-- ng-click="SendRequest()"-->
+    </div>
+</div>
+
+<script src="js/dop.js"></script>
+</body>
+</html>
