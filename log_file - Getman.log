@@ -1,863 +1,157 @@
-2016-08-01 14:27:16 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:16 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:16 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:16 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:16 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:16 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:16 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:16 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:16 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/
-2016-08-01 14:27:16 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:16 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:16 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:16 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:16 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:16 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:16 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:16 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/
-2016-08-01 14:27:16 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/
-2016-08-01 14:27:16 INFO  MyListener:49 - > Listener: getServletPath() : /index.html
-2016-08-01 14:27:16 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:16 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:16 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:16 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:16 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - upgrade-insecure-requests : 1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-none-match : W/"3521-1470038572000"; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-modified-since : Mon, 01 Aug 2016 08:02:52 GMT; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:16 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:16 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:16 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:16 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:16 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:16 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:16 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:16 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:16 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:16 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470039860171
-2016-08-01 14:27:16 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:16 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:16 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:16 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:16 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:16 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:16 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:16 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:16 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:16 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:16 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/css/style.css
-2016-08-01 14:27:16 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:16 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:16 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:16 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:16 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:16 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:16 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:16 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/css/style.css
-2016-08-01 14:27:16 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/css/style.css
-2016-08-01 14:27:16 INFO  MyListener:49 - > Listener: getServletPath() : /css/style.css
-2016-08-01 14:27:16 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:16 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:16 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:16 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:16 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/css,*/*;q=0.1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-none-match : W/"2075-1470038600000"; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-modified-since : Mon, 01 Aug 2016 08:03:20 GMT; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:16 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:16 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:16 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:16 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:16 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:16 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:16 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:16 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:16 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:16 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:16 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:16 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:16 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:16 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040036421
-2016-08-01 14:27:16 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:16 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:19 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:19 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:19 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:19 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:19 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:19 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:19 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/
-2016-08-01 14:27:19 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:19 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:19 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:19 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:19 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:19 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:19 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:19 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/
-2016-08-01 14:27:19 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/
-2016-08-01 14:27:19 INFO  MyListener:49 - > Listener: getServletPath() : /index.html
-2016-08-01 14:27:19 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:19 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:19 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:19 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:19 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - pragma : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - upgrade-insecure-requests : 1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:19 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:19 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040036468
-2016-08-01 14:27:19 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:19 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:19 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:19 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:19 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:19 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:19 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:19 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:19 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/css/style.css
-2016-08-01 14:27:19 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:19 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:19 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:19 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:19 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:19 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:19 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:19 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/css/style.css
-2016-08-01 14:27:19 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:19 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:19 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:19 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:19 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:19 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/css/style.css
-2016-08-01 14:27:19 INFO  MyListener:49 - > Listener: getServletPath() : /css/style.css
-2016-08-01 14:27:19 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:19 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:19 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:19 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:19 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/js/dop.js
-2016-08-01 14:27:19 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2249
-2016-08-01 14:27:19 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:19 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:19 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:19 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:19 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:19 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:19 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/js/dop.js
-2016-08-01 14:27:19 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/js/dop.js
-2016-08-01 14:27:19 INFO  MyListener:49 - > Listener: getServletPath() : /js/dop.js
-2016-08-01 14:27:19 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:19 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:19 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:19 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:19 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:19 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:19 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:19 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - pragma : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:19 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:19 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040039140
-2016-08-01 14:27:19 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:19 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - pragma : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/css,*/*;q=0.1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:19 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:19 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:19 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:19 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:19 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:19 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:19 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:19 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:19 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040039187
-2016-08-01 14:27:19 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:19 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:25 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:25 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:25 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:25 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:25 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:25 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:25 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/
-2016-08-01 14:27:25 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:25 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:25 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:25 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:25 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:25 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:25 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:25 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/
-2016-08-01 14:27:25 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/
-2016-08-01 14:27:25 INFO  MyListener:49 - > Listener: getServletPath() : /index.html
-2016-08-01 14:27:25 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:25 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:25 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:25 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:25 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : max-age=0; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - upgrade-insecure-requests : 1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-none-match : W/"3519-1470039850000"; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-modified-since : Mon, 01 Aug 2016 08:24:10 GMT; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:25 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:25 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040039187
-2016-08-01 14:27:25 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:25 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:25 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:25 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:25 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:25 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:25 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:25 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:25 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:25 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:25 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:25 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:25 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/css/style.css
-2016-08-01 14:27:25 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:25 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:25 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:25 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:25 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/js/dop.js
-2016-08-01 14:27:25 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2249
-2016-08-01 14:27:25 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:25 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:25 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:25 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:25 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:25 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:25 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:25 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:25 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:25 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:25 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:25 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:25 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/css/style.css
-2016-08-01 14:27:25 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/css/style.css
-2016-08-01 14:27:25 INFO  MyListener:49 - > Listener: getServletPath() : /css/style.css
-2016-08-01 14:27:25 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:25 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:25 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:25 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:25 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - pragma : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : max-age=0; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/css,*/*;q=0.1; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-none-match : W/"2075-1470038600000"; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/js/dop.js
-2016-08-01 14:27:25 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/js/dop.js
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-modified-since : Mon, 01 Aug 2016 08:03:20 GMT; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:49 - > Listener: getServletPath() : /js/dop.js
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:25 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:25 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - pragma : no-cache; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cache-control : max-age=0; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-none-match : W/"10214-1469765678000"; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - if-modified-since : Fri, 29 Jul 2016 04:14:38 GMT; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:25 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:25 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040045484
-2016-08-01 14:27:25 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:25 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:25 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:25 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:25 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:25 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:25 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:25 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:25 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:25 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:25 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040045546
-2016-08-01 14:27:25 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:25 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:27 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:27 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:27 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:28 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:28 INFO  MyListener:33 - > Listener: метод(getMethod) : OPTIONS
-2016-08-01 14:27:28 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:28 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:28 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:28 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:28 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:28 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:28 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:28 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:28 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:28 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:28 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:28 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:28 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:28 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:28 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:28 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:28 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:28 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:28 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:28 INFO  MyListener:53 - > Listener: getContentType() : text/plain;charset=UTF-8
-2016-08-01 14:27:28 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-length : 2; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - origin : http://localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : text/plain;charset=UTF-8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:28 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:28 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:28 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:28 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:28 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:28 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:28 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:28 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:28 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:28 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:28 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:28 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:28 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:28 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:28 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:28 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:28 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:28 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:28 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040045546
-2016-08-01 14:27:28 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:28 INFO  MyListener:132 - > Listener: getReader() : {}
-2016-08-01 14:27:30 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:30 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:30 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:30 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:30 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
-2016-08-01 14:27:30 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:30 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:30 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:30 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:30 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:30 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:30 INFO  MyListener:40 - > Listener: getQueryString : 
-2016-08-01 14:27:30 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:30 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:30 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:30 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:30 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:30 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:30 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:30 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:30 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:30 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:30 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:30 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:30 INFO  MyListener:53 - > Listener: getContentType() : null
-2016-08-01 14:27:30 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:30 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:30 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:30 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:30 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:30 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:30 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:30 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:30 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:30 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:30 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:30 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:30 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:30 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:30 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:30 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:30 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:30 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:30 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:30 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040048031
-2016-08-01 14:27:30 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:30 INFO  MyListener:113 - > Listener: getQueryString() : {}
-2016-08-01 14:27:30 INFO  MyListener:132 - > Listener: getReader() : 
-2016-08-01 14:27:32 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:32 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:32 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:32 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:32 INFO  MyListener:33 - > Listener: метод(getMethod) : HEAD
-2016-08-01 14:27:32 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:32 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:32 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:32 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:32 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2231
-2016-08-01 14:27:32 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:32 INFO  MyListener:40 - > Listener: getQueryString : %7B%7D
-2016-08-01 14:27:32 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:32 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:32 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:32 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:32 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:32 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:32 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:32 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:32 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:32 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:32 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:32 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:32 INFO  MyListener:53 - > Listener: getContentType() : application/x-www-form-urlencoded; charset=windows-1251
-2016-08-01 14:27:32 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:32 INFO  MyListener:62 - > Listener: getParameterNames : Parametr - {}[0] : 
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : application/x-www-form-urlencoded; charset=windows-1251; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:32 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:32 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:32 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:32 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:32 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:32 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:32 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:32 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:32 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:32 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:32 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:32 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:32 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:32 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:32 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:32 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:32 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:32 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:32 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040050640
-2016-08-01 14:27:32 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:34 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:34 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:34 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:34 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:34 INFO  MyListener:33 - > Listener: метод(getMethod) : POST
-2016-08-01 14:27:34 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:34 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:34 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:34 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:34 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2249
-2016-08-01 14:27:34 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:34 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:34 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:34 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:34 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:34 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:34 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:34 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:34 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:34 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:34 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:34 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:34 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:34 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:34 INFO  MyListener:53 - > Listener: getContentType() : text/plain;charset=UTF-8
-2016-08-01 14:27:34 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-length : 2; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - origin : http://localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : text/plain;charset=UTF-8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:34 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:34 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:34 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:34 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:34 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:34 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:34 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:34 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:34 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:34 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:34 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:34 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:34 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:34 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:34 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:34 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:34 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:34 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:34 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040052062
-2016-08-01 14:27:34 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:34 INFO  MyListener:132 - > Listener: getReader() : {}
-2016-08-01 14:27:49 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:49 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:49 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:49 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:49 INFO  MyListener:33 - > Listener: метод(getMethod) : POST
-2016-08-01 14:27:49 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:49 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:49 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:49 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:49 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2249
-2016-08-01 14:27:49 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:49 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:49 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:49 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:49 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:49 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:49 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:49 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:49 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:49 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:49 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:49 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:49 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:49 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:49 INFO  MyListener:53 - > Listener: getContentType() : text/plain;charset=UTF-8
-2016-08-01 14:27:49 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-length : 2; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - origin : http://localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : text/plain;charset=UTF-8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:49 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:49 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:49 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:49 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:49 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:49 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:49 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:49 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:49 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:49 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:49 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:49 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:49 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:49 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:49 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:49 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:49 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:49 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:49 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040054937
-2016-08-01 14:27:49 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:49 INFO  MyListener:132 - > Listener: getReader() : {}
-2016-08-01 14:27:51 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:51 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:27:51 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:27:51 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:27:51 INFO  MyListener:33 - > Listener: метод(getMethod) : PUT
-2016-08-01 14:27:51 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:27:51 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:27:51 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:27:51 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:27:51 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2249
-2016-08-01 14:27:51 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:27:51 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:27:51 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:27:51 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:27:51 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:27:51 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:27:51 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:51 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:51 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:27:51 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:27:51 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:27:51 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:27:51 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:27:51 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:27:51 INFO  MyListener:53 - > Listener: getContentType() : text/plain;charset=UTF-8
-2016-08-01 14:27:51 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-length : 2; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - origin : http://localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : text/plain;charset=UTF-8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:27:51 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:27:51 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:27:51 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:27:51 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:27:51 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:51 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:27:51 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:27:51 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:27:51 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:27:51 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:27:51 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:27:51 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:27:51 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:27:51 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:27:51 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:27:51 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:27:51 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:27:51 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:27:51 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040069656
-2016-08-01 14:27:51 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:27:51 INFO  MyListener:132 - > Listener: getReader() : {}
-2016-08-01 14:28:15 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:28:15 INFO  MyListener:30 - ---------------------------------------------------------
-2016-08-01 14:28:15 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
-2016-08-01 14:28:15 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
-2016-08-01 14:28:15 INFO  MyListener:33 - > Listener: метод(getMethod) : PATCH
-2016-08-01 14:28:15 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
-2016-08-01 14:28:15 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
-2016-08-01 14:28:15 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
-2016-08-01 14:28:15 INFO  MyListener:37 - > Listener: path(getRequestURI) : /Getman/zad
-2016-08-01 14:28:15 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 2257
-2016-08-01 14:28:15 INFO  MyListener:39 - > Listener: getRemoteUser : null
-2016-08-01 14:28:15 INFO  MyListener:40 - > Listener: getQueryString : null
-2016-08-01 14:28:15 INFO  MyListener:41 - > Listener: getScheme : http
-2016-08-01 14:28:15 INFO  MyListener:42 - > Listener: getPathInfo : null
-2016-08-01 14:28:15 INFO  MyListener:43 - > Listener: getContextPath() : /Getman
-2016-08-01 14:28:15 INFO  MyListener:44 - > Listener: getPathTranslated() : null
-2016-08-01 14:28:15 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:28:15 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:28:15 INFO  MyListener:47 - > Listener: getRequestURI() : /Getman/zad
-2016-08-01 14:28:15 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/Getman/zad
-2016-08-01 14:28:15 INFO  MyListener:49 - > Listener: getServletPath() : /zad
-2016-08-01 14:28:15 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
-2016-08-01 14:28:15 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
-2016-08-01 14:28:15 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
-2016-08-01 14:28:15 INFO  MyListener:53 - > Listener: getContentType() : text/plain;charset=UTF-8
-2016-08-01 14:28:15 INFO  MyListener:54 - > Listener: getAuthType() : null
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-length : 2; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - origin : http://localhost:8080; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - content-type : text/plain;charset=UTF-8; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/Getman/; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : JSESSIONID=3DB57B98B9224A8B89200B3A584913DB; Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
-2016-08-01 14:28:15 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
-2016-08-01 14:28:15 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
-2016-08-01 14:28:15 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : JSESSIONID
-2016-08-01 14:28:15 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
-2016-08-01 14:28:15 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:28:15 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
-2016-08-01 14:28:15 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
-2016-08-01 14:28:15 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
-2016-08-01 14:28:15 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
-2016-08-01 14:28:15 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
-2016-08-01 14:28:15 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : Idea-a26a2fd4
-2016-08-01 14:28:15 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
-2016-08-01 14:28:15 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 2ae131c5-2724-45ce-95ad-b5598b672985
-2016-08-01 14:28:15 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
-2016-08-01 14:28:15 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
-2016-08-01 14:28:15 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
-2016-08-01 14:28:15 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470038956109
-2016-08-01 14:28:15 INFO  MyListener:96 - > Listener: httpSession.getId() : 3DB57B98B9224A8B89200B3A584913DB
-2016-08-01 14:28:15 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470040071609
-2016-08-01 14:28:15 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
-2016-08-01 14:28:15 INFO  MyListener:132 - > Listener: getReader() : {}
+2016-08-02 09:31:12 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:30 - ---------------------------------------------------------
+2016-08-02 09:31:13 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
+2016-08-02 09:31:13 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
+2016-08-02 09:31:13 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
+2016-08-02 09:31:13 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
+2016-08-02 09:31:13 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
+2016-08-02 09:31:13 INFO  MyListener:37 - > Listener: path(getRequestURI) : /
+2016-08-02 09:31:13 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 1514
+2016-08-02 09:31:13 INFO  MyListener:39 - > Listener: getRemoteUser : null
+2016-08-02 09:31:13 INFO  MyListener:40 - > Listener: getQueryString : null
+2016-08-02 09:31:13 INFO  MyListener:41 - > Listener: getScheme : http
+2016-08-02 09:31:13 INFO  MyListener:42 - > Listener: getPathInfo : null
+2016-08-02 09:31:13 INFO  MyListener:43 - > Listener: getContextPath() : 
+2016-08-02 09:31:13 INFO  MyListener:44 - > Listener: getPathTranslated() : null
+2016-08-02 09:31:13 INFO  MyListener:45 - > Listener: getRequestedSessionId() : null
+2016-08-02 09:31:13 INFO  MyListener:46 - > Listener: getRequestedSessionId() : null
+2016-08-02 09:31:13 INFO  MyListener:47 - > Listener: getRequestURI() : /
+2016-08-02 09:31:13 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/
+2016-08-02 09:31:13 INFO  MyListener:49 - > Listener: getServletPath() : /index.html
+2016-08-02 09:31:13 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : false
+2016-08-02 09:31:13 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
+2016-08-02 09:31:13 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : false
+2016-08-02 09:31:13 INFO  MyListener:53 - > Listener: getContentType() : null
+2016-08-02 09:31:13 INFO  MyListener:54 - > Listener: getAuthType() : null
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - upgrade-insecure-requests : 1; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : Idea-a26a2fd4
+2016-08-02 09:31:13 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 2ae131c5-2724-45ce-95ad-b5598b672985
+2016-08-02 09:31:13 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
+2016-08-02 09:31:13 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
+2016-08-02 09:31:13 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
+2016-08-02 09:31:13 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470108673046
+2016-08-02 09:31:13 INFO  MyListener:96 - > Listener: httpSession.getId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470108673046
+2016-08-02 09:31:13 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
+2016-08-02 09:31:13 INFO  MyListener:132 - > Listener: getReader() : 
+2016-08-02 09:31:13 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:30 - ---------------------------------------------------------
+2016-08-02 09:31:13 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
+2016-08-02 09:31:13 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
+2016-08-02 09:31:13 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
+2016-08-02 09:31:13 INFO  MyListener:28 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:30 - ---------------------------------------------------------
+2016-08-02 09:31:13 INFO  MyListener:31 - > Listener: Характеристики полученного запроса:
+2016-08-02 09:31:13 INFO  MyListener:32 - > Listener: тип и версия протокола(getProtocol) : HTTP/1.1
+2016-08-02 09:31:13 INFO  MyListener:33 - > Listener: метод(getMethod) : GET
+2016-08-02 09:31:13 INFO  MyListener:34 - > Listener: host(getServerName) : localhost
+2016-08-02 09:31:13 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
+2016-08-02 09:31:13 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
+2016-08-02 09:31:13 INFO  MyListener:35 - > Listener: ip(getRemoteAddr) : 127.0.0.1
+2016-08-02 09:31:13 INFO  MyListener:37 - > Listener: path(getRequestURI) : /css/style.css
+2016-08-02 09:31:13 INFO  MyListener:36 - > Listener: port(getServerPort) : 8080
+2016-08-02 09:31:13 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 1514
+2016-08-02 09:31:13 INFO  MyListener:39 - > Listener: getRemoteUser : null
+2016-08-02 09:31:13 INFO  MyListener:40 - > Listener: getQueryString : null
+2016-08-02 09:31:13 INFO  MyListener:41 - > Listener: getScheme : http
+2016-08-02 09:31:13 INFO  MyListener:42 - > Listener: getPathInfo : null
+2016-08-02 09:31:13 INFO  MyListener:37 - > Listener: path(getRequestURI) : /js/dop.js
+2016-08-02 09:31:13 INFO  MyListener:38 - > Listener: отправлено с порта(getRemotePort) : 1517
+2016-08-02 09:31:13 INFO  MyListener:39 - > Listener: getRemoteUser : null
+2016-08-02 09:31:13 INFO  MyListener:40 - > Listener: getQueryString : null
+2016-08-02 09:31:13 INFO  MyListener:41 - > Listener: getScheme : http
+2016-08-02 09:31:13 INFO  MyListener:42 - > Listener: getPathInfo : null
+2016-08-02 09:31:13 INFO  MyListener:43 - > Listener: getContextPath() : 
+2016-08-02 09:31:13 INFO  MyListener:44 - > Listener: getPathTranslated() : null
+2016-08-02 09:31:13 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:47 - > Listener: getRequestURI() : /js/dop.js
+2016-08-02 09:31:13 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/js/dop.js
+2016-08-02 09:31:13 INFO  MyListener:49 - > Listener: getServletPath() : /js/dop.js
+2016-08-02 09:31:13 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
+2016-08-02 09:31:13 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
+2016-08-02 09:31:13 INFO  MyListener:43 - > Listener: getContextPath() : 
+2016-08-02 09:31:13 INFO  MyListener:44 - > Listener: getPathTranslated() : null
+2016-08-02 09:31:13 INFO  MyListener:45 - > Listener: getRequestedSessionId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:46 - > Listener: getRequestedSessionId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:47 - > Listener: getRequestURI() : /css/style.css
+2016-08-02 09:31:13 INFO  MyListener:48 - > Listener: getRequestURL() : http://localhost:8080/css/style.css
+2016-08-02 09:31:13 INFO  MyListener:49 - > Listener: getServletPath() : /css/style.css
+2016-08-02 09:31:13 INFO  MyListener:50 - > Listener: isRequestedSessionIdFromCookie() : true
+2016-08-02 09:31:13 INFO  MyListener:51 - > Listener: isRequestedSessionIdFromURL() : false
+2016-08-02 09:31:13 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
+2016-08-02 09:31:13 INFO  MyListener:52 - > Listener: isRequestedSessionIdValid() : true
+2016-08-02 09:31:13 INFO  MyListener:53 - > Listener: getContentType() : null
+2016-08-02 09:31:13 INFO  MyListener:54 - > Listener: getAuthType() : null
+2016-08-02 09:31:13 INFO  MyListener:53 - > Listener: getContentType() : null
+2016-08-02 09:31:13 INFO  MyListener:54 - > Listener: getAuthType() : null
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : */*; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - host : localhost:8080; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - connection : keep-alive; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept : text/css,*/*;q=0.1; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; JSESSIONID=1FDDF51558AD369B58300D926146A357; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - user-agent : Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : Idea-a26a2fd4
+2016-08-02 09:31:13 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 2ae131c5-2724-45ce-95ad-b5598b672985
+2016-08-02 09:31:13 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
+2016-08-02 09:31:13 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
+2016-08-02 09:31:13 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
+2016-08-02 09:31:13 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : JSESSIONID
+2016-08-02 09:31:13 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
+2016-08-02 09:31:13 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
+2016-08-02 09:31:13 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - referer : http://localhost:8080/; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470108673046
+2016-08-02 09:31:13 INFO  MyListener:96 - > Listener: httpSession.getId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470108673078
+2016-08-02 09:31:13 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-encoding : gzip, deflate, sdch; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:132 - > Listener: getReader() : 
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - accept-language : ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:72 - > Listener: getHeaderNames : getHeader - cookie : Idea-a26a2fd4=2ae131c5-2724-45ce-95ad-b5598b672985; JSESSIONID=1FDDF51558AD369B58300D926146A357; getDateHeader : -1; getIntHeader : -1
+2016-08-02 09:31:13 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [0] : Idea-a26a2fd4
+2016-08-02 09:31:13 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [0] : null
+2016-08-02 09:31:13 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [0] : 2ae131c5-2724-45ce-95ad-b5598b672985
+2016-08-02 09:31:13 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [0] : -1
+2016-08-02 09:31:13 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [0] : false
+2016-08-02 09:31:13 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [0] : 0
+2016-08-02 09:31:13 INFO  MyListener:78 - > Listener: getCookies : Cookies.getComment - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:79 - > Listener: getCookies : Cookies.getDomain - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:80 - > Listener: getCookies : Cookies.getName - [1] : JSESSIONID
+2016-08-02 09:31:13 INFO  MyListener:81 - > Listener: getCookies : Cookies.getPath - [1] : null
+2016-08-02 09:31:13 INFO  MyListener:82 - > Listener: getCookies : Cookies.getValue - [1] : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:83 - > Listener: getCookies : Cookies.getMaxAge - [1] : -1
+2016-08-02 09:31:13 INFO  MyListener:84 - > Listener: getCookies : Cookies.getSecure - [1] : false
+2016-08-02 09:31:13 INFO  MyListener:85 - > Listener: getCookies : Cookies.getVersion - [1] : 0
+2016-08-02 09:31:13 INFO  MyListener:95 - > Listener: httpSession.getCreationTime() : 1470108673046
+2016-08-02 09:31:13 INFO  MyListener:96 - > Listener: httpSession.getId() : 1FDDF51558AD369B58300D926146A357
+2016-08-02 09:31:13 INFO  MyListener:97 - > Listener: httpSession.getLastAccessedTime() : 1470108673125
+2016-08-02 09:31:13 INFO  MyListener:98 - > Listener: httpSession.getMaxInactiveInterval() : 1800
+2016-08-02 09:31:13 INFO  MyListener:132 - > Listener: getReader() : 

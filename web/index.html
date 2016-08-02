@@ -7,6 +7,7 @@
     <script type="text/javascript" src="http://scriptjava.net/source/scriptjava/scriptjava.js"></script>
 
 </head>
+<body ng-controller="mainCtrl">
 <div id="iheader">
     <p id="ip">Getman</p>
 </div>
@@ -26,7 +27,7 @@
             </select>
         </div>
         <div id="durls">
-            <input id="iurls" name="nurls" type="text" value="http://localhost:8080/Getman/" disabled="disabled">
+            <input id="iurls" name="nurls" type="text" value="http://localhost:8080/Getman" disabled="disabled">
         </div>
         <div id="durld">
             <input id="iurld" name="nurld" type="text" value="">
@@ -35,11 +36,12 @@
             <input id="ibparam" name="nbparam" type="button" value="Params" onclick="AddParamN()">
         </div>
         <div id="dbsend">
-            <input id="ibsend" name="nbsend" type="button" value="Send">
+            <input id="ibsend" name="nbsend" type="submit" value="Send" onclick="SendRequest()">
         </div>
     </div>
 </div>
 <div id="h2_param_path">
+    <!--Repeat block-->
     <!--div id="h2_param_path_1" class="ch2_param_path_1">
         <div class="cdpath_param_key">
             <input id="ipath_param_key_1" type="text" placeholder="key" class="cipath_param_key">
@@ -51,7 +53,6 @@
             <input id="ipath_param_del_1" type="button" value="x" class="cipath_param_del">
         </div>
     </div-->
-    <!--Repeat block-->
 </div>
 <div id="h3_zagolovki">
     <div id="dh3_zagolovki_1">
@@ -65,17 +66,90 @@
     </div>
 </div>
 <div id="h4_zag_input">
-ddddddddd
+    <div id="dh4_zag_input_2">
+        <!--Button ADD-->
+        <div id="dh4_zag_input_1" class="cdh4_zag_input_20">
+            <!--div id="dh4_zag_input_10">
+                <span>Constructor</span>
+            </div-->
+            <div id="dh4_zag_input_11" class="cdh4_zag_input_11">
+                <input id="ih4_zag_input_11" class="cih4_zag_input_11" type="button" value="+"  onclick="AddNewInput()">
+            </div>
+            <div id="dh4_zag_input_11vs1" class="cdh4_zag_input_1ob_text">
+                <div class="inp_zag">
+                    <span>Create input</span>
+                </div>
+            </div>
+            <div id="dh4_zag_input_12" class="cdh4_zag_input_1ob_text">
+                <div class="inp_zag">
+                    <span>Type:</span>
+                </div>
+            </div>
+            <div id="dh4_zag_input_13" class="cdh4_zag_input_1ob_inp">
+                <select id="sdh4_zag_input_13" class="cdh4_zag_input_1ob_si" name="nsel_type" size="1" required="required">
+                    <option>button</option>
+                    <option>checkbox</option>
+                    <option>file</option>
+                    <option>hidden</option>
+                    <option>image</option>
+                    <option>password</option>
+                    <option>radio</option>
+                    <option>reset</option>
+                    <option>submit</option>
+                    <option>text</option>
+                </select>
+            </div>
+            <div id="dh4_zag_input_14vs">
+                <div id="dh4_zag_input_14vs1" class="cdh4_zag_input_1ob_text">
+                    <div class="inp_zag">
+                        <span>Constructor form</span>
+                    </div>
+                </div>
+                <div id="dh4_zag_input_14" class="cdh4_zag_input_1ob_text">
+                    <div class="inp_zag">
+                        <span>Name:</span>
+                    </div>
+                </div>
+                <div id="dh4_zag_input_15" class="cdh4_zag_input_1ob_inp">
+                    <input id="ih4_zag_input_15" class="cdh4_zag_input_1ob_si" type="text" placeholder="Name">
+                </div>
+                <div id="dh4_zag_input_16" class="cdh4_zag_input_1ob_text">
+                    <div class="inp_zag">
+                        <span>Action:</span>
+                    </div>
+                </div>
+                <div id="dh4_zag_input_17" class="cdh4_zag_input_1ob_inp">
+                    <input id="ih4_zag_input_17" class="cdh4_zag_input_1ob_si" type="text" placeholder="URL">
+                </div>
+            </div>
+        </div>
+        <!--Repeat block-->
+        <!--div class="cdh4_zag_input_20" id="dh4_zag_input_20">
+
+        </div-->
+
+    </div>
+
 </div>
 <div id="h4_zag_headers">
-    <p>Раздел в разработке (Headers)</p>
+    <div id="dh4_zag_headers_1">
+        <input id="ih4_zag_headers" type="button" value="+" onclick="AddHeaders()">
+    </div>
+    <div id="dh4_zag_headers_2">
+
+    </div>
 </div>
 <div id="h4_zag_body">
-    <p>Раздел в разработке (Body)</p>
+    <div id="dh4_zag_body">
+        <textarea id="tdh4_zag_body" ></textarea>
+    </div>
 </div>
 
+<div id="inviz_block1" class="cinviz">
+</div>
+<div id="inviz_block">
 <p>----------------------------------------------------------------------------------------------------</p>
-<body ng-controller="mainCtrl">
+
 
 <form id="myform" name="myformname"></form>
 <div id="div_head">
@@ -155,6 +229,7 @@ ddddddddd
     <div id="div_foot_but">
         <input type="submit" value="Отправить запрос" id="but_submit" form="myform"/><!-- ng-click="SendRequest()"-->
     </div>
+</div>
 </div>
 
 <script src="js/dop.js"></script>

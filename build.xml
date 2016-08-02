@@ -26,12 +26,14 @@
         <delete dir="${tomcat}/logs"/>
         <delete dir="${dest.dir}"/>
         <delete dir="${tomcat.webapps}/${project.name}"/>
+        <delete dir="${tomcat.webapps}/ROOT"/>
         <delete file="${tomcat.webapps}/${project.name}.war"/>
         <delete file="${file.log}"/>
     </target>
 
     <target name="2. make_dest_dir">
         <mkdir dir="${dest.dir}"/>
+        <mkdir dir="${tomcat.webapps}/ROOT"/>
     </target>
 
     <target name="3. compile" depends="1. clear, 2. make_dest_dir">
@@ -71,6 +73,10 @@
             <fileset dir="./">
                 <include name="*.war"/>
             </fileset>
+        </copy>
+        <!--Put in to ROOT-->
+        <copy todir="${tomcat.webapps}/ROOT">
+            <fileset dir="${build.dir}"/>
         </copy>
     </target>
 
@@ -123,6 +129,14 @@
             <arg value="/c"/>
             <arg value="${brawser}"/>
             <arg value="${host}:${port}/${project.name}/"/>
+        </exec>
+    </target>
+
+    <target name="9.4. start.browser(ROOT)" depends="9.1. start.tomcat">
+        <exec executable="cmd" dir="${tomcat.bin}">
+            <arg value="/c"/>
+            <arg value="${brawser}"/>
+            <arg value="${host}:${port}/"/>
         </exec>
     </target>
 
