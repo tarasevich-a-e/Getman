@@ -14,7 +14,7 @@
 <div id="h1_mainquery">
     <div id="h1_mainquery_1">
         <div id="dsel_method">
-            <select id="isel_method" name="nsel_method" size="1" required="required">
+            <select id="isel_method" name="nsel_method" size="1" required="required" onchange="RequestMethod()">
                 <option>OPTIONS</option>
                 <option>GET</option>
                 <option>HEAD</option>
@@ -22,12 +22,12 @@
                 <option>PUT</option>
                 <option>PATCH</option>
                 <option>DELETE</option>
-                <option>TRACE</option>
-                <option>CONNECT</option>
+                <option disabled>TRACE</option>
+                <option disabled>CONNECT</option>
             </select>
         </div>
         <div id="durls">
-            <input id="iurls" name="nurls" type="text" value="http://localhost:8080/Getman" disabled="disabled">
+            <input id="iurls" name="nurls" type="text" value="http://localhost:8080" disabled="disabled">
         </div>
         <div id="durld">
             <input id="iurld" name="nurld" type="text" value="">
@@ -36,7 +36,13 @@
             <input id="ibparam" name="nbparam" type="button" value="Params" onclick="AddParamN()">
         </div>
         <div id="dbsend">
-            <input id="ibsend" name="nbsend" type="submit" value="Send" onclick="SendRequest()">
+            <input id="ibsend" name="nbsend" type="submit" value="Send" onclick="SendRequest()"><!--onclick-->
+        </div>
+        <div id="dbsend_method">
+            <select id="issend_method" name="nbmethod" size="1" required="required">
+                <option>AJAX</option>
+                <option disabled>Submit</option>
+            </select>
         </div>
     </div>
 </div>
@@ -148,88 +154,7 @@
 <div id="inviz_block1" class="cinviz">
 </div>
 <div id="inviz_block">
-<p>----------------------------------------------------------------------------------------------------</p>
 
-
-<form id="myform" name="myformname"></form>
-<div id="div_head">
-    <div class="div_head_block">
-        <h1>URL</h1>
-    </div>
-    <div class="div_head_block">
-        <p>Host</p>
-        <input type="text" id="url_host" value="http://localhost" disabled="disabled" ng-model="url_host"/>
-    </div>
-    <div class="div_head_block">
-        <p>Port</p>
-        <input type="text" id="url_port" value=":8080" disabled="disabled" ng-model="url_port"/>
-    </div>
-    <div class="div_head_block">
-        <p>Project</p>
-        <input type="text" id="url_project" value="/Getman/" disabled="disabled" ng-model="url_project"/>
-    </div>
-    <div class="div_head_block">
-        <p>Path</p>
-        <input type="text" id="uri_path" value="zad" form="myform" ng-model="url_path"/>
-    </div>
-</div>
-
-<div id="div_middle">
-    <div class="div_middle_block">
-        <div class="div_middle_block_in radio_cl">
-            <div class="in_method">
-                <p>OPTIONS</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="OPTIONS" checked="checked">
-            </div>
-            <div class="in_method">
-                <p>GET</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="GET">
-            </div>
-            <div class="in_method">
-                <p>HEAD</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="HEAD">
-            </div>
-            <div class="in_method">
-                <p>POST</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="POST">
-            </div>
-            <div class="in_method">
-                <p>PUT</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="PUT">
-            </div>
-            <div class="in_method">
-                <p>PATCH</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="PATCH">
-            </div>
-            <div class="in_method">
-                <p>DELETE</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="DELETE">
-            </div>
-            <div class="in_method">
-                <p>TRACE</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="TRACE" disabled="disabled">
-            </div>
-            <div class="in_method">
-                <p>CONNECT</p>
-                <input ng-model="method" type="radio" name="type_zapros" value="CONNECT" disabled="disabled">
-            </div>
-        </div>
-    </div>
-    <div id="control">
-        <div id="control_pane">
-            <input id="control_pane_inp" type="button" value="+" onclick="AddInput()"/>
-        </div>
-        <div id="input_block">
-
-        </div>
-    </div>
-</div>
-
-<div id="div_foot">
-    <div id="div_foot_but">
-        <input type="submit" value="Отправить запрос" id="but_submit" form="myform"/><!-- ng-click="SendRequest()"-->
-    </div>
-</div>
 </div>
 
 <script src="js/dop.js"></script>

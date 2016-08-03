@@ -382,11 +382,12 @@
         //ind_headers--;
         }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //Function send request to server
-    function SendRequest() {
+//Function send request to server
+function SendRequest() {
         var flag_er = false;
         var ind_create_input = 0;
-        var str = document.getElementById("iurls").value;
+        var str_url_stat = document.getElementById("iurls").value;
+        var str_quest_param = "";
 
         if(flag_zagolovka == 1) {
         //Send INPUT
@@ -401,8 +402,6 @@
                     var vstavka_inputov = document.getElementById("inviz_block1");
                     var form_name = document.getElementById("ih4_zag_input_15").value;
                     var form_action = document.getElementById("ih4_zag_input_17").value;
-                    //Form send to url "action"
-                    document.getElementById("iurld").value = form_action;
                     var form_method = document.getElementById("isel_method").value;
                     var form_id = "myForm";
 
@@ -416,7 +415,11 @@
                         new_form.name = form_name;
                         new_form.setAttribute('action', form_action);
                         new_form.setAttribute('method', form_method);
-                        vstavka_inputov.appendChild(new_form);
+                        new_form.setAttribute('enctype', "multipart/form-data");
+                        //new_form.setAttribute('onSubmit', "return false");
+                        //document.getElementById("iheader").appendChild(new_form);
+                        document.body.insertBefore(new_form,inviz_block1); //
+                        //inviz_block1.insertBefore(new_form,inviz_block1.firstChild);
 
                     } else {
 
@@ -443,6 +446,7 @@
 
                                 new_input_v.setAttribute('type', document.getElementById("ih4_zag_input_18" + mas_input[i]).value);
                                 new_input_v.setAttribute('form', form_id);
+                                vstavka_inputov = document.getElementById("myForm");//заменяем vstavka_inputov для тестов
                                 vstavka_inputov.appendChild(new_input_v);
                             } else {
                                 new_input_v = document.getElementById("new_in_" + ind_create_input);
@@ -459,7 +463,7 @@
                                 }
                         }
                     }
-
+                    //document.getElementById("ibsend").setAttribute('form', form_id);
 
                 } else {
                     alert('Заполните поля "name" и "action" у Form!');
@@ -478,237 +482,120 @@
 
         }
 
-        str = str + document.getElementById("iurld").value;
+        //str = str + document.getElementById("iurld").value;
         if(mas_params.length != 0) {
                 //We have params_path
+
                     for(var i = 0; i < mas_params.length; i++) {
                         if((mas_params[i] != -1) && (document.getElementById("ipath_param_key_" + mas_params[i]).value != "")) {
-                            str = str + '?' + document.getElementById("ipath_param_key_" + mas_params[i]).value + '=' + document.getElementById("ipath_param_value_" + mas_params[i]).value + '&';
+                            str_quest_param = str_quest_param + document.getElementById("ipath_param_key_" + mas_params[i]).value + '=' + document.getElementById("ipath_param_value_" + mas_params[i]).value + '&';
                         }
                     }
+                    str_quest_param = str_quest_param.substr(0,str_quest_param.length -1);
+
                 }
 
         if(flag_er == false) {
-            document.getElementById("myForm").submit();
-            alert('Запрос отправлен!\n' + str);
+            //document.getElementById("myForm").submit(); //- в любом случае перегружает страницу
+            /*document.forms["имя формы"].submit() или
+            document.forms.имя формы.submit()*/
+            //********var f_id = document.getElementById("myForm");
+            //********f_id.submit();
+            //document.forms.myForm.submit();
+            //alert('Запрос отправлен!\n' + str);
+            SendToServer(str_url_stat, str_quest_param);
         } else {
             alert('Ошибка, запрос не отправлен!\n' + str);
         }
     return false;
-    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /*Old version*/
-    function AddInput(){
-        var ind_tec = ind;
-        //Create <div>
-        var inp_div = document.createElement('div');
-        inp_div.className = "new_div";
-        inp_div.id = "ndiv" + ind_tec;
-
-        //Create two <input>
-        var input = document.createElement('input');
-        var input2 = document.createElement('input');
-        input.className = "new_input_kl";
-        input2.className = "new_input_vl";
-        input.id = "inpkey" + ind_tec;
-        input2.id = "inpval" + ind_tec;
-        //input.setAttribute('form','myform');
-        //input2.setAttribute('form','myform');
-        input.setAttribute('name',"inpkey" + ind_tec);
-        input2.setAttribute('name',"inpval" + ind_tec);
-        in_name[ind_tec] = "inpkey" + ind_tec;
-        in_value[ind_tec] = "inpval" + ind_tec;
-
-        //Create <div> - text(INPUT)
-        var div_t_i = document.createElement('div');
-        div_t_i.className = "new_div_text_in";
-        div_t_i.innerHTML = "INPUT " + ind_tec;
-
-        //Create <div> - content <div>+<input>
-        var div_kl = document.createElement('div');
-        var div_vl = document.createElement('div');
-        div_kl.className = "new_div_obsh_kl";
-        div_vl.className = "new_div_obsh_vl";
-
-        var div1 = document.createElement('div');
-        var div2 = document.createElement('div');
-        div1.className = "new_div_text_kl";
-        div2.className = "new_div_text_vl";
-        div1.innerHTML = "name";
-        div2.innerHTML = "value";
-
-        //Append element on <div> with key(TEXT + <INPUT>)
-        div_kl.appendChild(div1);
-        div_kl.appendChild(input);
-        //Append element on <div> with value(TEXT + <INPUT>)
-        div_vl.appendChild(div2);
-        div_vl.appendChild(input2);
-
-        //Append element on <div>
-        inp_div.appendChild(div_t_i);
-        inp_div.appendChild(div_kl);
-        inp_div.appendChild(div_vl);
-
-        vstavka.appendChild(inp_div);
-        ind++;
+//Function read method otpravki http zaprosa (JS, AJAX, submit)
+function RequestMethod() {
+    var id_method = document.getElementById("isel_method");
+    //OPTIONS
+    if((id_method.value == "OPTIONS") || (id_method.value == "PUT") || (id_method.value == "PATCH") || (id_method.value == "DELETE")){
+        var sel_id = document.getElementById("issend_method");
+        sel_id.options[0].removeAttribute('disabled');
+        sel_id.options[1].setAttribute('disabled', "disabled");
+        if(sel_id.options[sel_id.selectedIndex].hasAttribute('disabled') == true){
+            sel_id.selectedIndex = 0;
+            }
     }
-
-    document.getElementById("but_submit").onclick = function(){
-        ////////////////////////////////////////////////////////
-        //С учетом отсутствия перезагрузки страницы после
-        //отправки запроса, необходимо удалить созданные ранее INPUTы
-
-        for(var j = 0; j < in_name.length; j++) {
-
-            var new_el_value = document.getElementById(in_name[j]).value;
-            var new_el = document.getElementById("new_" + new_el_value);
-            if(new_el != null) {
-                new_el.setAttribute('form', ''); //подстраховка
-                new_el.parentNode.removeChild(new_el);
-                }
+    //GET or POST
+    if((id_method.value == "GET") || (id_method.value == "POST")){
+        var sel_id = document.getElementById("issend_method");
+        sel_id.options[0].removeAttribute('disabled');
+        sel_id.options[1].removeAttribute('disabled');
+    }
+    //HEAD
+    if(id_method.value == "HEAD"){
+        var sel_id = document.getElementById("issend_method");
+        sel_id.options[0].removeAttribute('disabled');
+        sel_id.options[1].setAttribute('disabled', "disabled");
+        if(sel_id.options[sel_id.selectedIndex].hasAttribute('disabled') == true){
+            sel_id.selectedIndex = 0;
             }
+    }
+}
 
-        ////////////////////////////////////////////////////////
+function SendToServer(s_url_stat, s_quest_param) {
+    //If create with form
+    var s_form_action = "";
+    var s_url_input = "";
 
-        var inradio = document.getElementsByName('type_zapros');
-        var flagcheck=false;
-        var method = "";
+    var id_sposob = document.getElementById("issend_method");
+    var name_sposob = id_sposob.options[id_sposob.selectedIndex].text;
 
-        //Проверка седержания конструкторов INPUT'ов и создание INPUT'ов для отправки в form
-        var flag_er = false;
-        //Если INPUTы есть генерируем их, если нет отправляем без них
-        if(in_name.length != 0) {
-         for(var i = 0; i < in_name.length; i++) {
-            if(document.getElementById(in_name[i]).value != "") {
-                //Проверяем на совпадение имен
-                if(i != 0) {
-                    for(var j = 0; j < in_name.length; j++) {
-                        if((document.getElementById(in_name[i]).value == document.getElementById(in_name[j]).value) && (i != j)) {
-                            flag_er = true;
-                            break;
-                            }
-                        }
-                    }
-                if(flag_er == true) {break;}
-                //Значения name и value в конструкторе не пустые создаем INPUT
-                var new_input = document.createElement('input');
-                new_input.className = "input_invis";
-                new_input.id = "new_" + document.getElementById(in_name[i]).value;
-                new_in_id[i] = new_input.id;
-                new_input.setAttribute('form', 'myform');
-                new_input.setAttribute('type', 'text');
-                new_input.setAttribute('name', document.getElementById(in_name[i]).value);
-                new_input.setAttribute('value', document.getElementById(in_value[i]).value);
-                document.getElementById("div_foot").appendChild(new_input);
-                } else {
-                    alert('Не задано имя INPUTа. Для отправки запроса необходимо исправить ошибку.');
-                    break;
-                }
-         }
-        }
+    var id_method = document.getElementById("isel_method");
+    var name_method = id_method.options[id_method.selectedIndex].text;
 
-         if(flag_er == true) {
-         alert('Одинаковые имена INPUTов. Для отправки запроса необходимо исправить ошибку.');
-         } else {
+    //Отправляемые данные
+    var formData = "";
+    var url ="";
 
-            //Проверка на выбор метода отправки
-            for(var i = 0; i < inradio.length; i++) {
-                if(inradio[i].checked){
-                    flagcheck = true;
-                    method = inradio[i].getAttribute('value');
-                    break;
-                }
-            }
-            if(flagcheck){
-                var uri_path_val = document.getElementById("uri_path").getAttribute('value');
-                var url_host_val = document.getElementById("url_host").getAttribute('value');
-                var url_port_val = document.getElementById("url_port").getAttribute('value');
-                var url_project_val = document.getElementById("url_project").getAttribute('value');
-                var url = url_host_val + url_port_val + url_project_val + uri_path_val;
-                var zapros = new XMLHttpRequest();
-                var form_id = document.getElementById("myform");
-                var formData1 = new FormData(form_id);
-                //Заполняем форму данными из созданных INPUT
-                //var mas = {};
-                //var str = '';
-                //str = str + "{";
-                var str = "{";
-                var strGET = "?"
-                for(var i = 0; i < new_in_id.length; i++) {
-                    //    mas[document.getElementById(new_in_id[i]).name] = document.getElementById(new_in_id[i]).value; // массив для передачи тоже готов, как альтернатива
-                    if(i != 0){
-                        str = str + ",";
-                        strGET = strGET +"&";
-                        }
-                    str = str + "\"" + document.getElementById(new_in_id[i]).name + "\":\"" + document.getElementById(new_in_id[i]).value + "\"";
-                    strGET = strGET + document.getElementById(new_in_id[i]).name + "=" + document.getElementById(new_in_id[i]).value;
-                }
-                str = str + "}";
-                var formData = str;
-                //formData = mas;
+    if(name_sposob == "AJAX") {
 
-                if(method == "OPTIONS"){
-                            zapros.open(method, url, true);
-                            zapros.send(formData);
-                            }
+        var zapros = new XMLHttpRequest();
 
-                if(method == "GET"){
-                            zapros.open(method, url + strGET, true); //false - синхронное соединение/true - задается асинхронное соединение с адресом u_path_val(браузер не ждет ответ сервера)
-                                                      //для обработки ответа функцию необходимо вежать на свойство onreadystatechange
-                            zapros.send(null); //null - тело запроса отсутствует
-                            }
-
-                if(method == "HEAD"){
-                            $$a({
-                                type:'head',
-                                url: url,
-                                data: formData,//параметры запроса
-                                response:'text'
-                                });
-                            }
-
-                if(method == "POST"){
-                            zapros.open(method, url, true);
-                            zapros.send(formData);
-                            }
-
-                if(method == "PUT"){
-                            zapros.open(method, url, true);
-                            zapros.send(formData);
-                            }
-
-                if(method == "PATCH"){
-                            zapros.open(method, url, true);
-                            zapros.send(formData);
-                            }
-
-                if(method == "DELETE"){
-                            zapros.open(method, url, true);
-                            zapros.send(formData);
-                            }
-
-                if(method == "TRACE"){
-                            $$a({
-                                type:'trace',
-                                url: url,
-                                data: formData,//параметры запроса
-                                response:'text'
-                                });
-                            }
-
-                if(method == "CONNECT"){
-                            $$a({
-                                type: method,
-                                url: url,
-                                data: formData,//параметры запроса
-                                response:'text'
-                                });
-                            }
-
+        //Если выделен раздел INPUT
+        if (flag_zagolovka == 1) {
+            //собрать пары key-value у input'ов
+            //определиться с форматом отправляемым в body (JSON или какой еще)
+            //s_form_action   - action
+            //s_url_input  - пары key-value
+            //s_url_input;
+            //s_form_action;
             } else {
-                alert('Не выбран метод отправки');
+                s_form_action = document.getElementById("iurld").value; // Если формы инпутов нет, то берем введенный пользователем урл
+
             }
-         }
-         return false;
+
+
+
+        if((name_method == "GET") || (name_method == "HEAD")){
+            url = s_url_stat + s_form_action + "?" + s_url_input + "&" + s_quest_param;
+            formData = null;
+
+        } else {
+            url =  s_url_stat + s_form_action + "?" + s_quest_param;  //Проверить нужны ли они тут
+            formData = s_url_input;
+            }
+
+            zapros.open(name_method, url, true);
+            zapros.send(formData);
+            //false - синхронное соединение/true - задается асинхронное соединение с адресом u_path_val(браузер не ждет ответ сервера)
+            //для обработки ответа функцию необходимо вежать на свойство onreadystatechange
+            //null - тело запроса отсутствует
+            if (s_quest_param == ""){url = url.substr(0, url.length - 1);}
+            if (s_url_input == ""){url = url.substr(0, url.length - 1);}
+            document.getElementById("iurld").value = url.substr(s_url_stat.length, url.length);
     }
+
+    if(name_sposob == "Sabmit") {
+
+        }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

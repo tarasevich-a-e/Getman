@@ -67,11 +67,25 @@
 }
 #ibsend {
     font-size: inherit;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 0px 0px 10px;
     border: 1px solid rgb(169, 169, 169);
     background-color: rgb(9,123,237);
     color: rgb(255,255,255);
     width: 100px;
+    border-right: 0px;
+}
+#dbsend_method {
+    display: inherit;
+    font-size: inherit;
+    margin-left: 0px;
+}
+#issend_method {
+    font-size: inherit;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid rgb(169, 169, 169);
+    background-color: rgb(9,123,237);
+    color: rgb(255,255,255);
+    /*width: 22px;*/
 }
 /*----H2---*/
 #h2_param_path {
