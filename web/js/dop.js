@@ -555,47 +555,99 @@ function SendToServer(s_url_stat, s_quest_param) {
     var formData = "";
     var url ="";
 
+    var flag_file = 0;
+        for (var i = 0; i < document.forms.myForm.elements.length; i++) {
+            if (document.forms.myForm.elements[i].type == "file") {
+                flag_file++;
+            }
+        }
+
     if(name_sposob == "AJAX") {
 
-        var zapros = new XMLHttpRequest();
+        if(flag_file == 0) {
+            var zapros = new XMLHttpRequest();
 
-        //Если выделен раздел INPUT
-        if (flag_zagolovka == 1) {
-            //собрать пары key-value у input'ов
-            //определиться с форматом отправляемым в body (JSON или какой еще)
-            //s_form_action   - action
-            //s_url_input  - пары key-value
-            //s_url_input;
-            //s_form_action;
+
+
+            //Если выделен раздел INPUT
+            if (flag_zagolovka == 1) {
+                //собрать пары key-value у input'ов
+                //определиться с форматом отправляемым в body (JSON или какой еще)
+                //s_form_action   - action
+                //s_url_input  - пары key-value
+                //s_url_input;
+                //s_form_action;
+                s_form_action = document.getElementById("ih4_zag_input_17").value;
+                }
+
+            if (s_form_action == "") { s_form_action = document.getElementById("iurld").value; } // Если у формы нет эктион и отсутствуют параметры запроса, в эктион лижим заданный самостоятельно урл
+
+            if((name_method == "GET") || (name_method == "HEAD")){
+                url = s_url_stat;
+                if(s_form_action != ""){url = url + s_form_action;}
+                if (mas_input.length != 0) { s_url_input = GetInputStr("=");}
+                if(s_url_input != ""){url = url + "?" + s_url_input;}
+                if(s_quest_param != ""){
+                    if(s_url_input != "") {
+                        url = url + "&" + s_quest_param;
+                        } else {
+                            url = url + "?" + s_quest_param;
+                        }
+                    }
+                formData = null;
+
             } else {
-                s_form_action = document.getElementById("iurld").value; // Если формы инпутов нет, то берем введенный пользователем урл
+                url = s_url_stat;
+                if(s_form_action != ""){url = url + s_form_action;}
+                if(s_quest_param != ""){url = url + "?" + s_quest_param;}
+                if (mas_input.length != 0) { s_url_input = GetInputStr(":"); }
+                formData = s_url_input;
+                }
 
-            }
+                zapros.open(name_method, url, true);
+                zapros.send(formData);
+                //false - синхронное соединение/true - задается асинхронное соединение с адресом u_path_val(браузер не ждет ответ сервера)
+                //для обработки ответа функцию необходимо вежать на свойство onreadystatechange
+                //null - тело запроса отсутствует
 
-
-
-        if((name_method == "GET") || (name_method == "HEAD")){
-            url = s_url_stat + s_form_action + "?" + s_url_input + "&" + s_quest_param;
-            formData = null;
-
+                document.getElementById("iurld").value = url.substr(s_url_stat.length, url.length);
         } else {
-            url =  s_url_stat + s_form_action + "?" + s_quest_param;  //Проверить нужны ли они тут
-            formData = s_url_input;
-            }
-
-            zapros.open(name_method, url, true);
-            zapros.send(formData);
-            //false - синхронное соединение/true - задается асинхронное соединение с адресом u_path_val(браузер не ждет ответ сервера)
-            //для обработки ответа функцию необходимо вежать на свойство onreadystatechange
-            //null - тело запроса отсутствует
-            if (s_quest_param == ""){url = url.substr(0, url.length - 1);}
-            if (s_url_input == ""){url = url.substr(0, url.length - 1);}
-            document.getElementById("iurld").value = url.substr(s_url_stat.length, url.length);
+            alert('Запрос не отправлен!\nНа форме присутствует файл\nВыберете способ отправки запроса Sгbmit и метод отправки запроса POST.');
+        }
     }
 
-    if(name_sposob == "Sabmit") {
+    if(name_sposob == "Submit") {
+
+        if(flag_file == 0) {
+            document.forms.myForm.submit();
+            } else {
+                if(name_method == "POST") {
+                    document.forms.myForm.submit();
+                    } else {
+                        alert('Запрос не отправлен!\nНа форме присутствует файл выберете метод отправки запроса POST.');
+                    }
+            }
 
         }
+
+return false; //идет перезагрузка??? и вместо парраметра отправляется трока с ? на конце
+}
+
+function GetInputStr(razdelitel) {
+    var rab_str = "";
+    for (var i=0; i < mas_input.length; i++) {
+        if(mas_input[i] != -1) {
+            //type - не учитывается type
+            rab_str =  rab_str + document.getElementById("ih4_zag_input_15" + mas_input[i]).value + razdelitel + document.getElementById("ih4_zag_input_17" + mas_input[i]).value;//"\"" +
+            if(razdelitel == ":"){ rab_str = rab_str + ";"; }
+                else { rab_str = rab_str + "&"; }
+            }
+        }
+        rab_str = rab_str.substr(0,rab_str.length - 1);// delete ";" or "&"
+    if(razdelitel == ":") {
+        rab_str = "{" + rab_str + "}";
+        }
+    return rab_str;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

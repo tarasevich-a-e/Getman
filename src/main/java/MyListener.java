@@ -3,12 +3,14 @@ package main.java;
 
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
 
@@ -97,6 +99,16 @@ public class MyListener implements ServletRequestListener {
         logger.info("> Listener: httpSession.getLastAccessedTime() : " + httpSession.getLastAccessedTime());
         logger.info("> Listener: httpSession.getMaxInactiveInterval() : " + httpSession.getMaxInactiveInterval());
 
+        //читаем файл
+        //Если POST и SUBMIT
+        if(req.getMethod().equals("POST")) {
+
+            try {
+                ServletInputStream servletInputStream = req.getInputStream();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         if(req.getQueryString() != null) {
             String bufferedReader = req.getQueryString();
