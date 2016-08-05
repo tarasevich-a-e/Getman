@@ -430,7 +430,7 @@ function SendRequest() {
                         new_form.setAttribute('method', form_method);
 
                     }
-
+                    var flag_fil = false;
                     for(var i = 0; i < mas_input.length; i++) {
                         //If input name not null
                         if((mas_input[i] != -1) && (document.getElementById("ih4_zag_input_15" + mas_input[i]).value != "")) {
@@ -438,21 +438,39 @@ function SendRequest() {
                             var new_input_v;
                             //Create input
                             if(document.getElementById("new_in_" + ind_create_input) == null) {
+
                                 new_input_v = document.createElement('input');
                                 new_input_v.id = "new_in_" + ind_create_input;
                                 new_input_v.className = "cinviz";
-                                new_input_v.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
-                                new_input_v.value = document.getElementById("ih4_zag_input_17" + mas_input[i]).value;
 
-                                new_input_v.setAttribute('type', document.getElementById("ih4_zag_input_18" + mas_input[i]).value);
-                                new_input_v.setAttribute('form', form_id);
-                                vstavka_inputov = document.getElementById("myForm");//заменяем vstavka_inputov для тестов
-                                vstavka_inputov.appendChild(new_input_v);
+                                if(document.getElementById("ih4_zag_input_18" + mas_input[i]).value == "file") {
+                                    var new_in = document.getElementById("ih4_zag_input_17" + mas_input[i]);
+                                    new_in.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
+                                    new_in.setAttribute('form', form_id);
+                                    flag_fil = true;
+                                    } else {
+                                        //new_input_v.setAttribute('type', document.getElementById("ih4_zag_input_18" + mas_input[i]).value);
+                                        new_input_v.type = document.getElementById("ih4_zag_input_18" + mas_input[i]).value;
+                                        new_input_v.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
+                                        new_input_v.value = document.getElementById("ih4_zag_input_17" + mas_input[i]).value;
+                                        new_input_v.setAttribute('form', form_id);
+                                        vstavka_inputov = document.getElementById("myForm");//заменяем vstavka_inputov для тестов
+                                        vstavka_inputov.appendChild(new_input_v);
+                                    }
+
+
                             } else {
                                 new_input_v = document.getElementById("new_in_" + ind_create_input);
-                                new_input_v.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
-                                new_input_v.value = document.getElementById("ih4_zag_input_17" + mas_input[i]).value;
-                                new_input_v.setAttribute('form', form_id);
+
+                                if (document.getElementById("ih4_zag_input_18" + mas_input[i]).value != "file"){
+                                    new_input_v.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
+                                    new_input_v.value = document.getElementById("ih4_zag_input_17" + mas_input[i]).value;
+                                    new_input_v.setAttribute('form', form_id);
+                                    } else {
+                                        var new_in = document.getElementById("ih4_zag_input_17" + mas_input[i]);
+                                        new_in.name = document.getElementById("ih4_zag_input_15" + mas_input[i]).value;
+                                        new_in.setAttribute('form', form_id);
+                                    }
                             }
                             ind_create_input++;
 
@@ -463,6 +481,11 @@ function SendRequest() {
                                 }
                         }
                     }
+                    //Если передается не файл, то обнуляем атрибут enctype у формы , по умолчанию будет application/x-www-form-urlencoded
+                    if(flag_fil == false) {
+                        new_form.removeAttribute('enctype');
+                        }
+
                     //document.getElementById("ibsend").setAttribute('form', form_id);
 
                 } else {
