@@ -8,12 +8,12 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
-    <!--servlet>
+    <servlet>
         <servlet-name>MyServlet</servlet-name>
         <servlet-class>main.java.MyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>/ooo</url-pattern>
-    </servlet-mapping-->
+    </servlet-mapping>
 </web-app>

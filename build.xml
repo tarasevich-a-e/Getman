@@ -69,11 +69,11 @@
     </target>
 
     <target name="6. copy2" depends="5. war">
-        <copy todir="${tomcat.webapps}">
+        <!--copy todir="${tomcat.webapps}">
             <fileset dir="./">
                 <include name="*.war"/>
             </fileset>
-        </copy>
+        </copy-->
         <!--Put in to ROOT-->
         <copy todir="${tomcat.webapps}/ROOT">
             <fileset dir="${build.dir}"/>

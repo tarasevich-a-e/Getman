@@ -1,5 +1,7 @@
 package main.java;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
 import javax.servlet.annotation.MultipartConfig;
@@ -16,7 +18,7 @@ import java.util.Vector;
  */
 @MultipartConfig
 public class MyServlet extends HttpServlet {
-
+    final static Logger logger = Logger.getLogger(MyServlet.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -24,118 +26,48 @@ public class MyServlet extends HttpServlet {
         //Если POST и SUBMIT
         if(req.getMethod().equals("POST") && req.getContentType().contains("multipart/form-data")) {
 
-            ServletInputStream in = req.getInputStream();
-            BufferedInputStream bf = new BufferedInputStream((InputStream)in);
-            StringBuffer data = new StringBuffer();
-            int bit;
-            while((bit = bf.read()) != -1)
-            {
-                data.append((char)bit);
+            try {
+                for (Part part: req.getParts()) {
+                    logger.info("Input name - " + part.getName());
+
+                    InputStream is = part.getInputStream();
+
+                    //Получаем количество байт доступных для чтения
+                    int len = is.available();
+                    //Создаем пустой массив tempbyte размером len
+                    byte[] tempbyte = new byte[len];
+
+                    //Читаем из потока(InputStream) в массив tempbyte
+                    is.read(tempbyte);
+
+                    if (part.getContentType() != null) {
+
+                        String path_config = req.getServletContext().getRealPath("/");
+
+                        String file_name="";
+                        for (String content : part.getHeader("content-disposition").split(";")) {
+                            if (content.trim().startsWith("filename")) {
+                                file_name = content.substring(content.indexOf('=') + 1).trim().replace("\"", "");
+                            }
+                        }
+
+                        OutputStream os = new FileOutputStream(path_config + file_name);
+                        os.write(tempbyte);
+                        os.close();
+
+                    }
+                    is.close();
+                }
+            } catch (IOException e) {
+                logger.info("IOException при чтении parts");
+                e.printStackTrace();
+            } catch (ServletException e) {
+                logger.info("ServletException при чтении parts");
+                e.printStackTrace();
             }
 
-            String all_data = new String(data);
-
-            //Получаем boundary
-            String boundary = extractBoundary(req.getHeader("Content-Type"));
-
-            FileInfo [] fileInfos = extractFiles(all_data, boundary);
-
-            for (int i = 0; i < fileInfos.length; i++) {
-                fileInfos[i].SaveFile(all_data, System.getProperty("user.dir") + System.getProperty("file.separator"));
-            }
-
         }
 
-    }
-
-    //////////////////////////////////////////ДЕЛИМ ЗАПРОС НА ЧАСТИ///////////////////////////////
-    private FileInfo[] extractFiles(String buff, String boundary) {
-        //Позиция найденного boundary
-        int index_boundary = 0;
-        //Первый индекс вхождения boundary в буффер
-        int perv_index_bound = 0;
-        //Итератор шагов
-        int i = 0;
-        //Для временного хранения частей сообщения
-        Vector buff_vec = new Vector();
-
-        while ((index_boundary = buff.indexOf(boundary, index_boundary)) != -1) {
-
-            //Начинаем обработку со второго вхождения boundary в буффер
-            if(i != 0) {
-                //Выделяем информацию по ограничению boundary в первого заголовка + содержимого
-                FileInfo fileInfo = new FileInfo("NO FILE", perv_index_bound, index_boundary - 2); //Убираем два последних байта стоящих перед boundary ({10,13})
-
-                extractData(fileInfo, buff.substring(perv_index_bound, index_boundary)); //Передаем объект для сбора информации о файле и текст ограниченный boundary
-                buff_vec.addElement(fileInfo); // Сохраняем ссылку на объект
-            }
-
-            index_boundary += boundary.length(); // Добавляем к индексу вхождения boundary его длину
-            perv_index_bound = index_boundary; // Сохраняем первое вхождение boundary
-            i++; // делаем шаг итерации
-        }
-
-        // i-1 должно равняться buff_vec.capacity();
-
-        FileInfo[] Data = new FileInfo[i-1];
-        Enumeration enumer = buff_vec.elements();
-        i=0;
-        while (enumer.hasMoreElements()) {
-            Data[i] = (FileInfo) enumer.nextElement();
-            i++;
-        }
-
-        return Data;
-    }
-
-    //////////////////////////////////////////ВЫДЕЛЯЕМ ЗАГОЛОВОК///////////////////////////////
-    private void extractData(FileInfo fileInfo, String buffer) {
-
-        //Выделяем заголовок
-        char[] ch = {'\r','\n','\r','\n'};
-        String line_ch = new String(ch);
-        String header;
-
-        int ind_pos = buffer.indexOf(line_ch,2);
-        if (ind_pos != -1) {
-            header = buffer.substring(0, ind_pos);
-            fileInfo.filename = getFileName(header);
-            fileInfo.start_index += ind_pos + 4; // 4 длина искомой строки ch
-        }
-
-    }
-
-    //////////////////////////////////////////ПОЛУЧАЕМ ИМЯ  ФАЙЛА///////////////////////////////
-    private String getFileName(String header) {
-
-        String filename = "";
-        header.toLowerCase();
-
-        int index;
-
-        if((index = header.indexOf("filename=")) != -1) {
-            int up_index_covichki = header.indexOf((int)'"', index + 1 +9); //1+9 это длина filename= + "
-            filename = header.substring(index + 1 +9, up_index_covichki);
-            //вычисляетс для разных ОС последний символ сепаратор, если он присутствует
-            index = filename.lastIndexOf((int)'/');
-            up_index_covichki = filename.lastIndexOf((int)'\\');
-            filename = filename.substring(Math.max(index, up_index_covichki) + 1);
-        } else {
-
-            filename = "NO FILE";
-        }
-
-        return filename;
-    }
-
-    //////////////////////////////////////////ИЗВЛЕКАЕМ ГРАНИЦУ РАЗДЕЛОВ//////////////////////////////
-    private String extractBoundary(String header) {
-
-        int index_bond = header.lastIndexOf("boundary="); // 9 символов в искомом слове
-        String boundary = header.substring(index_bond + 9);
-        boundary = "--" + boundary; //реальный boundary длиннее на два символа "--"
-
-        return boundary;
     }
 
 }

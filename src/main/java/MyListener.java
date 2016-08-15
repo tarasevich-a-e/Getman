@@ -29,16 +29,13 @@ public class MyListener implements ServletRequestListener {
 
     @Override
     public void requestInitialized(ServletRequestEvent servletRequestEvent) {
+
+            HttpServletRequest req = (HttpServletRequest) servletRequestEvent.getServletRequest();
+
         logger.info("------------------------------------------------------------------------------------------------");
         logger.info("------------------------------------------------------------------------------------------------");
         logger.info("------------------------------------------------------------------------------------------------");
         logger.info("> Listener: Характеристики полученного запроса:");
-        HttpServletRequest req = (HttpServletRequest) servletRequestEvent.getServletRequest();
-        /*try {
-            req.setCharacterEncoding("UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }*/
         logger.info("> Listener: тип и версия протокола(getProtocol) : " + req.getProtocol());
         logger.info("> Listener: метод(getMethod) : " + req.getMethod());
         logger.info("> Listener: host(getServerName) : " + req.getServerName());
@@ -63,73 +60,77 @@ public class MyListener implements ServletRequestListener {
         logger.info("> Listener: getContentType() : " + req.getContentType());
         logger.info("> Listener: getAuthType() : " + req.getAuthType());
         logger.info("> Listener: ");
-        logger.info("> Listener: ------------------------------------ParameterNames----------------------------------------");
-        Enumeration<String> stringEnumeration = req.getParameterNames();
-        while (stringEnumeration.hasMoreElements()) {
-            String paramName = (String) stringEnumeration.nextElement();
-            String[] stringValue = req.getParameterValues(paramName);
-            for (int i = 0; i < stringValue.length; i++) {
-                logger.info("> Listener: getParameterNames : Parametr - "+ paramName+"[" + i + "] : " + stringValue[i]);
-            }
-        }
-        logger.info("> Listener: ");
-        logger.info("> Listener: ------------------------------------HeaderNames----------------------------------------");
-        Enumeration<String> stringHeadersName = req.getHeaderNames();
-        while (stringHeadersName.hasMoreElements()) {
-            String paramName = (String) stringHeadersName.nextElement();
-            String stringHeader = req.getHeader(paramName);
-            Long LongValue = req.getDateHeader(stringHeader);
-            int intValue = req.getIntHeader(stringHeader);
-            logger.info("> Listener: getHeaderNames : getHeader - "+ paramName + " : " + stringHeader + "; getDateHeader : " + LongValue + "; getIntHeader : " + intValue);
-        }
-
-        logger.info("> Listener: ");
-        logger.info("> Listener: ------------------------------------Cookies--------------------------------------------");
-        if(req.getCookies() != null) {
-            Cookie[] cookies = req.getCookies();
-            for (int i = 0; i < cookies.length; i++) {
-                logger.info("> Listener: getCookies : Cookies.getComment - [" + i + "] : " + cookies[i].getComment());
-                logger.info("> Listener: getCookies : Cookies.getDomain - [" + i + "] : " + cookies[i].getDomain());
-                logger.info("> Listener: getCookies : Cookies.getName - [" + i + "] : " + cookies[i].getName());
-                logger.info("> Listener: getCookies : Cookies.getPath - [" + i + "] : " + cookies[i].getPath());
-                logger.info("> Listener: getCookies : Cookies.getValue - [" + i + "] : " + cookies[i].getValue());
-                logger.info("> Listener: getCookies : Cookies.getMaxAge - [" + i + "] : " + cookies[i].getMaxAge());
-                logger.info("> Listener: getCookies : Cookies.getSecure - [" + i + "] : " + cookies[i].getSecure());
-                logger.info("> Listener: getCookies : Cookies.getVersion - [" + i + "] : " + cookies[i].getVersion());
-            }
-        }
-
-        logger.info("> Listener: ");
-        logger.info("> Listener: ----------------------------------httpSession------------------------------------------");
-        HttpSession httpSession = req.getSession();
-        Enumeration<String> stringEnumeration1 = httpSession.getAttributeNames();
-        while (stringEnumeration1.hasMoreElements()) {
-            String paramName = (String) stringEnumeration1.nextElement();
-            Object ob = req.getAttribute(paramName);
-            logger.info("> Listener: getAttribute : Attribute - "+ paramName + " : " + ob.toString());
-        }
-        logger.info("> Listener: httpSession.getCreationTime() : " + httpSession.getCreationTime());
-        logger.info("> Listener: httpSession.getId() : " + httpSession.getId());
-        logger.info("> Listener: httpSession.getLastAccessedTime() : " + httpSession.getLastAccessedTime());
-        logger.info("> Listener: httpSession.getMaxInactiveInterval() : " + httpSession.getMaxInactiveInterval());
-
-        logger.info("> Listener: ");
-        logger.info("> Listener: --------------------------------------File---------------------------------------------");
-        //Если POST и SUBMIT
-        if(req.getMethod().equals("POST") && req.getContentType().contains("multipart/form-data")) {
 
             /*
-            InputStreamReader isr = new InputStreamReader(conn.getInputStream(), "windows-1251");
-            BufferedReader br = new BufferedReader(isr);
+            //Закомментирован в целях принятия файла в сервлете MyServlet
+            //Выключили рабочую секцию, чтобы не портила InputStream, иначе файл в сервлете не принять
+            logger.info("> Listener: ------------------------------------ParameterNames----------------------------------------");
+            Enumeration<String> stringEnumeration = req.getParameterNames();
+            while (stringEnumeration.hasMoreElements()) {
+                String paramName = (String) stringEnumeration.nextElement();
+                String[] stringValue = req.getParameterValues(paramName);
+                for (int i = 0; i < stringValue.length; i++) {
+                    logger.info("> Listener: getParameterNames : Parametr - "+ paramName+"[" + i + "] : " + stringValue[i]);
+                }
+            }
+            logger.info("> Listener: ");
             */
+
+
+            logger.info("> Listener: ------------------------------------HeaderNames----------------------------------------");
+            Enumeration<String> stringHeadersName = req.getHeaderNames();
+            while (stringHeadersName.hasMoreElements()) {
+                String paramName = (String) stringHeadersName.nextElement();
+                String stringHeader = req.getHeader(paramName);
+                Long LongValue = req.getDateHeader(stringHeader);
+                int intValue = req.getIntHeader(stringHeader);
+                logger.info("> Listener: getHeaderNames : getHeader - "+ paramName + " : " + stringHeader + "; getDateHeader : " + LongValue + "; getIntHeader : " + intValue);
+            }
+
+            logger.info("> Listener: ------------------------------------Cookies--------------------------------------------");
+            if(req.getCookies() != null) {
+                Cookie[] cookies = req.getCookies();
+                for (int i = 0; i < cookies.length; i++) {
+                    logger.info("> Listener: getCookies : Cookies.getComment - [" + i + "] : " + cookies[i].getComment());
+                    logger.info("> Listener: getCookies : Cookies.getDomain - [" + i + "] : " + cookies[i].getDomain());
+                    logger.info("> Listener: getCookies : Cookies.getName - [" + i + "] : " + cookies[i].getName());
+                    logger.info("> Listener: getCookies : Cookies.getPath - [" + i + "] : " + cookies[i].getPath());
+                    logger.info("> Listener: getCookies : Cookies.getValue - [" + i + "] : " + cookies[i].getValue());
+                    logger.info("> Listener: getCookies : Cookies.getMaxAge - [" + i + "] : " + cookies[i].getMaxAge());
+                    logger.info("> Listener: getCookies : Cookies.getSecure - [" + i + "] : " + cookies[i].getSecure());
+                    logger.info("> Listener: getCookies : Cookies.getVersion - [" + i + "] : " + cookies[i].getVersion());
+                }
+            }
+
+            logger.info("> Listener: ----------------------------------httpSession------------------------------------------");
+            HttpSession httpSession = req.getSession();
+            Enumeration<String> stringEnumeration1 = httpSession.getAttributeNames();
+            while (stringEnumeration1.hasMoreElements()) {
+                String paramName = (String) stringEnumeration1.nextElement();
+                Object ob = req.getAttribute(paramName);
+                logger.info("> Listener: getAttribute : Attribute - "+ paramName + " : " + ob.toString());
+            }
+            logger.info("> Listener: httpSession.getCreationTime() : " + httpSession.getCreationTime());
+            logger.info("> Listener: httpSession.getId() : " + httpSession.getId());
+            logger.info("> Listener: httpSession.getLastAccessedTime() : " + httpSession.getLastAccessedTime());
+            logger.info("> Listener: httpSession.getMaxInactiveInterval() : " + httpSession.getMaxInactiveInterval());
+
+
+
+
+
+        /*
+            logger.info("> Listener: --------------------------------------File---------------------------------------------");
+            //Если POST и SUBMIT
+            //Рабочий код для получения файла как Листнере так и в Сервлете (код более длинный нежели решать вопрос через партс, а так же рискованный из-за неоднократной конвертации входящего байткода)
+            if(req.getMethod().equals("POST") && req.getContentType().contains("multipart/form-data")) {
+            //Код рабочий
+            //Закомментирован в целях принятия файла в сервлете MyServlet
             StringBuffer data = new StringBuffer();
-            //ServletInputStream in = null;
             InputStreamReader in;
 
             try {
-                //in = req.getInputStream();
                 in = new InputStreamReader(req.getInputStream(), "ISO-8859-1"); //windows-1251
-                //BufferedInputStream bf = new BufferedInputStream((InputStream)in);
                 InputStreamReader bf = in;
 
                 int bit;
@@ -155,7 +156,11 @@ public class MyListener implements ServletRequestListener {
             }
             logger.info("> Listener: File save : " + System.getProperty("user.dir") + System.getProperty("file.separator"));
         }
+        */
 
+
+
+        //Выключили рабочую секцию, чтобы не портила InputStream, иначе файл в сервлете не принять
         logger.info("> Listener: ");
         logger.info("> Listener: --------------------------------------QueryString---------------------------------------------");
         if(req.getQueryString() != null) {
@@ -172,7 +177,10 @@ public class MyListener implements ServletRequestListener {
             logger.info("> Listener: getQueryString() : " + stringHashMap);
         }
 
-        logger.info("> Listener: ");
+
+
+        //Выключили рабочую секцию, чтобы не портила InputStream, иначе файл в сервлете не принять
+        /*
         logger.info("> Listener: -----------------------------------------Reader-----------------------------------------------");
         BufferedReader breader = null;
         try {
@@ -193,6 +201,7 @@ public class MyListener implements ServletRequestListener {
             }
             logger.info("> Listener: getReader() : " + sb.toString());
         }
+        */
 
     }
 
