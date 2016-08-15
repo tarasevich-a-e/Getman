@@ -73,9 +73,7 @@ public class MyListener implements ServletRequestListener {
                     logger.info("> Listener: getParameterNames : Parametr - "+ paramName+"[" + i + "] : " + stringValue[i]);
                 }
             }
-            logger.info("> Listener: ");
             */
-
 
             logger.info("> Listener: ------------------------------------HeaderNames----------------------------------------");
             Enumeration<String> stringHeadersName = req.getHeaderNames();
